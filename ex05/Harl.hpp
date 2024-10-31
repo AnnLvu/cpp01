@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvutina <alvutina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 10:32:35 by alvutina          #+#    #+#             */
-/*   Updated: 2024/10/31 10:32:36 by alvutina         ###   ########.fr       */
+/*   Created: 2024/10/31 11:17:42 by alvutina          #+#    #+#             */
+/*   Updated: 2024/10/31 11:34:08 by alvutina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-void randomChump(std::string name) {
-    Zombie zombie(name); // Stack allocation
-    zombie.announce();   // The zombie announces itself
-}
+#include <string>
+#include <iostream>
+
+
+class Harl 
+{
+public:
+    void complain(const std::string& level);
+
+private:
+    void debug();
+    void info();
+    void warning();
+    void error();
+};
+
+#endif
